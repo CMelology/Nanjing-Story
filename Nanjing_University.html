@@ -96,7 +96,28 @@
                     <div class="card-body">
                         <h5 class="card-title">Glazed wall</h5>
                         <p class="card-text">琉璃照壁建筑于清乾隆十五年（1780年），皇上第三任天花图案清代国家管制重要体现。</p>
-                        <a href="#" class="btn btn-primary">Read story</a>
+<!--                        <a href="#" class="btn btn-primary">Read story</a>-->
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#contentModal">Read story</a>
+
+                        <div class="modal fade" id="contentModal" tabindex="-1" role="dialog" aria-labelledby="contentModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="contentModalLabel">Story Introduction</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>This is the content of your story. You can introduce your story here in detail. Add more text to see how it looks with more content. You can also include images, videos, or any other HTML elements to make the introduction more engaging.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                     </div>
                 </div>
             </div>
