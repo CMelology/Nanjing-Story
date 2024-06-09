@@ -59,7 +59,7 @@
                         <a href="#" class="nav-link" data-page="Nanjing_Opera_Literature">Nanjing Opera Literature</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link" data-page="Nanjing_Fine_Foods">Nanjing Fine Foods</a>
+                        <a href="#" class="nav-link" data-page="Nanjing_Fine_Food">Nanjing Fine Food</a>
                     </li>
 
                     <!-- Add more nav items here -->
@@ -71,19 +71,31 @@
     <div id="content" class="container mt-4"></div>
 
 
-    <script>
-        $(document).ready(function() {
-            // Automatically load Home_page.html when the page loads
-            $('#content').load('Home_page.html');
+   <script>
+        function loadPage(page) {
+            $('#content').load(page + '.html', function(response, status, xhr) {
+                if (status == "error") {
+                    console.log("Error loading page: " + xhr.status + " " + xhr.statusText);
+                } else {
+                    bindNavigation();
+                }
+            });
+        }
 
-            // Navigation link click handler
-            $('.nav-link').on('click', function(event) {
+        function bindNavigation() {
+            $('.nav-link').off('click').on('click', function(event) {
                 event.preventDefault();
                 let page = $(this).data('page');
-                $('#content').load(page + '.html');
+                loadPage(page);
             });
+        }
+
+        $(document).ready(function() {
+            // Automatically load Home_Page.html when the page loads
+            loadPage('Home_Page');
         });
     </script>
+
 
 </body>
 </html>
