@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Nanjing Story: The Art of Collecting Seals</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         body {
             background-image: url('img/background.jpg');
@@ -13,39 +17,36 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
         }
+        .navbar-nav .nav-link {
+            color: #000 !important;
+        }
+
+        .header img {
+            width: 100%;
+            height: 100%; /* Maintain aspect ratio */
+        }
+
     </style>
 </head>
 <body>
-<!-- Background image -->
 
+    <!-- Header with image -->
+    <div class="header">
+        <img src="img/Nanjing_Uninversity_header.jpg" alt="Nanjing University Header">
+    </div>
 
-<div class="container-fluid p-5 bg-primary text-white text-center">
-    <h1>大图放这里</h1>
-    <p>请调整这张响应式页面的大小以查看效果！</p>
-</div>
-
-
-<!-- Navigation -->
-<!--<nav>-->
-<!--    <a href="#" class="nav-link" data-page="Nanjing_University">Nanjing University</a>-->
-<!--    <a href="#" class="nav-link" data-page="about">About</a>-->
-<!--    <a href="#" class="nav-link" data-page="contact">Contact</a>-->
-<!--</nav>-->
-
+    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="#">Contents</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-<!--            todo: button键不起作用-->
-
-
 
 
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item active">
                         <a href="#" class="nav-link" data-page="Home_Page">Homepage</a>
                     </li>
@@ -55,28 +56,13 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link" data-page="Nanjing_Opera_Literature">Nanjing Opera Literature</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link" data-page="Nanjing_University">Nanjing University</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link" data-page="Nanjing_University">Nanjing University</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link" data-page="Nanjing_University">Nanjing University</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link" data-page="Nanjing_University">Nanjing University</a>
-                    </li>
+                    <!-- Add more nav items here -->
                 </ul>
             </div>
         </div>
     </nav>
 
-
-
-
-
-<div id="content"></div>
+    <div id="content" class="container mt-4"></div>
 
 
     <script>
