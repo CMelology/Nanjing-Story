@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.main-image {
+    position: relative;
+    background-size: cover;
+    height: 60vh;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+}
+
+.text-center {
+    text-align: center;
+}
